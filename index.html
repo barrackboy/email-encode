@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function encodeEmailAddress(email) {
+        var encodedEmail = encodeURIComponent(email);
+        return '<a href="mailto:' + encodedEmail + '">' + encodedEmail + "</a>";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="emailContainer"></div>
+    <script>
+      var email = "example@example.com";
+      var encodedEmail = encodeEmailAddress(email);
+      document.getElementById("emailContainer").innerHTML = encodedEmail;
+    </script>
+    <div id="emailContainer2"></div>
+    <script>
+      var email = "example2@example.com";
+      var encodedEmail = encodeEmailAddress(email);
+      document.getElementById("emailContainer2").innerHTML = encodedEmail;
+    </script>
+  </body>
+</html>
